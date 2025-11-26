@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YoPostagens — blog</title>
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <h1 class="logo">Yo Postagens</h1>
+      <p class="tagline">Compartilhe pensamentos — Yo blog dark</p>
+    </div>
+  </header>
+
+  <main class="container" id="main" role="main">
+    <!-- Form de criação de post -->
+    <section class="composer" aria-labelledby="composer-title">
+      <h2 id="composer-title">Criar nova postagem</h2><br>
+
+      <form id="postForm" class="post-form" aria-label="Criar postagem">
+        <label for="titulo">Título da postagem</label>
+        <input id="titulo" name="titulo" type="text" maxlength="100" required
+               placeholder="Dê um título curto" />
+
+        <label for="conteudo">Conteúdo da postagem</label>
+        <textarea id="conteudo" name="conteudo" rows="5" maxlength="1000" required
+                  placeholder="Escreva algo..."></textarea>
+
+        <div class="form-actions">
+          <button id="btnPost" type="submit" class="btn primary">Postar</button>
+          <button id="btnClear" type="button" class="btn ghost">Limpar</button>
+        </div>
+
+        <div id="formStatus" class="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <!-- Área de renderização (requisitos: ids específicos) -->
+    <section class="latest" aria-labelledby="latest-title">
+      <h2 id="latest-title">Última postagem enviada</h2>
+
+      <!-- IDs exigidos pelo enunciado para renderização -->
+      <article class="rendered-post" aria-live="polite">
+        <h3 id="renderizador-titulo" class="render-title">—</h3>
+        <p id="renderizador-conteudo" class="render-body">Nenhuma postagem enviada ainda.</p>
+      </article>
+    </section>
+
+    <!-- Lista de posts (append/prepend) -->
+    <section class="feed" aria-labelledby="feed-title">
+      <h2 id="feed-title">Feed</h2>
+      <div id="posts" class="posts-list" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <small>© 2025 Yo Postagens — Projeto desenvolvido por Yonah em parceria com a DEVStart SENAI</small>
+    </div>
+  </footer>
+
+  <!-- JS externo -->
+  <script src="script.js"></script>
+</body>
+</html>
