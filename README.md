@@ -66,3 +66,9 @@ Os elementos são organizados com espaçamentos adequados e uma interface amigá
 -button para enviar
 -Uma área de exibição da postagem enviada
 -Todo elemento possui id, facilitando a captura no JavaScript.
+
+
+Autora
+
+Yonah Falcão.
+Projeto Yo Postagens – Desenvolvido por Yonah em parceria DEVStart SENAI.
